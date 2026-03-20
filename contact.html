@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Libertas Tours</title>
+  <meta name="description" content="Neem contact op met Libertas Tours. Vraag een offerte aan voor training aan boord van De Libertas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B', dark: '#111D35' },
+        gold: { DEFAULT: '#C9A96E', light: '#D4BA88' },
+      }}}
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white">
+
+  <!-- NAVIGATIE -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <svg class="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 17h18l-2-4H5L3 17zm0 2v1a1 1 0 001 1h16a1 1 0 001-1v-1H3zM12 2L8 8h8l-4-6z"/>
+          </svg>
+          <span class="logo-text font-display text-xl font-semibold text-gray-800">Libertas Tours</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Home</a>
+          <a href="agenda.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Agenda</a>
+          <a href="bemanning.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Bemanning</a>
+          <a href="locaties.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Locaties</a>
+          <a href="service-en-tarieven.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Service en Rates</a>
+          <a href="contact.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Contact</a>
+        </div>
+        <button id="hamburger" class="md:hidden text-gray-800 p-2" aria-label="Menu openen">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-navy z-50 flex flex-col items-center justify-center gap-8 md:hidden">
+      <button id="mobile-close" class="absolute top-6 right-6 text-white p-2" aria-label="Menu sluiten">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <a href="index.html" class="text-white text-2xl font-display">Home</a>
+      <a href="agenda.html" class="text-white text-2xl font-display">Agenda</a>
+      <a href="bemanning.html" class="text-white text-2xl font-display">Bemanning</a>
+      <a href="locaties.html" class="text-white text-2xl font-display">Locaties</a>
+      <a href="service-en-tarieven.html" class="text-white text-2xl font-display">Service en Rates</a>
+      <a href="contact.html" class="text-white text-2xl font-display">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="pt-32 pb-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="font-display text-4xl md:text-5xl text-navy mb-4">Contact</h1>
+      <div class="section-divider"></div>
+      <p class="text-text-light text-lg mt-6">
+        Neem contact op voor een vrijblijvend gesprek of vraag direct een offerte aan.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACTFORMULIER -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12">
+
+        <!-- Formulier -->
+        <div class="fade-in">
+          <h2 class="font-display text-2xl text-navy mb-6">Stuur ons een bericht</h2>
+
+          <!-- Formspree formulier — vervang YOUR_FORM_ID door je Formspree ID -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+
+            <div>
+              <label for="naam" class="block text-sm font-medium text-gray-700 mb-1">Naam *</label>
+              <input type="text" id="naam" name="naam" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mailadres *</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm">
+            </div>
+
+            <div>
+              <label for="telefoon" class="block text-sm font-medium text-gray-700 mb-1">Telefoon</label>
+              <input type="tel" id="telefoon" name="telefoon"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm">
+            </div>
+
+            <div>
+              <label for="interesse" class="block text-sm font-medium text-gray-700 mb-1">Waar bent u in geïnteresseerd?</label>
+              <select id="interesse" name="interesse"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm bg-white">
+                <option value="">— Maak een keuze —</option>
+                <option value="dagtraining">Dagtraining aan boord</option>
+                <option value="meerdaags">Meerdaagse training</option>
+                <option value="teambuilding">Teambuilding & Leiderschap</option>
+                <option value="reflectie">Reflectie & Persoonlijke Koers</option>
+                <option value="vakmanschap">Vakmanschap sessie</option>
+                <option value="anders">Anders</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="bericht" class="block text-sm font-medium text-gray-700 mb-1">Bericht *</label>
+              <textarea id="bericht" name="bericht" rows="5" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm"
+                placeholder="Vertel ons over uw wensen, het aantal deelnemers en de gewenste periode..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-gold text-sm uppercase tracking-wider w-full text-center">
+              Versturen
+            </button>
+          </form>
+
+          <p class="text-xs text-text-light mt-4">
+            * Verplichte velden. Uw gegevens worden vertrouwelijk behandeld.
+          </p>
+        </div>
+
+        <!-- Contactgegevens -->
+        <div class="fade-in">
+          <h2 class="font-display text-2xl text-navy mb-6">Contactgegevens</h2>
+
+          <div class="space-y-8">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-navy mb-1">E-mail</h3>
+                <a href="mailto:info@libertas.tours" class="text-text-light hover:text-gold transition-colors">
+                  info@libertas.tours
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-navy mb-1">Thuishaven</h3>
+                <p class="text-text-light">De Libertas vaart op wisselende locaties door Nederland</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-navy mb-1">Reactietijd</h3>
+                <p class="text-text-light">Wij reageren binnen 24 uur op uw bericht.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Citaat -->
+          <div class="mt-12 p-6 bg-gray-50 rounded-lg">
+            <blockquote class="quote text-lg">
+              "De beste reis begint met een enkel gesprek."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-dark text-white/70 py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h4 class="font-display text-lg text-white mb-4">Libertas Tours</h4>
+          <p class="text-sm leading-relaxed">Een Kempenaar op de rivier, in blauw, wit en zwart.</p>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-white mb-4">Navigatie</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+            <li><a href="bemanning.html" class="hover:text-gold transition-colors">Bemanning</a></li>
+            <li><a href="het-schip.html" class="hover:text-gold transition-colors">Het Schip</a></li>
+            <li><a href="service-en-tarieven.html" class="hover:text-gold transition-colors">Service en Rates</a></li>
+            <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-white mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:info@libertas.tours" class="hover:text-gold transition-colors">info@libertas.tours</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 text-center text-xs text-white/40">
+        <p>&copy; 2026 Libertas Tours. Alle rechten voorbehouden.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

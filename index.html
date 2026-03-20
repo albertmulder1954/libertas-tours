@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libertas Tours — Game-based training op een historisch opleidingsschip</title>
+  <meta name="description" content="De Libertas biedt game-based trainingen, reflectie-coaching en leiderschapsprogramma's aan boord van een historisch opleidingsschip van 38 meter.">
+  <meta name="keywords" content="Libertas Tours, opleidingsschip, training, coaching, teambuilding, leiderschap, De Libertas">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Libertas Tours — Training op het water">
+  <meta property="og:description" content="Game-based training in een historisch opleidingsschip te midden van schitterende locaties.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://libertas.tours">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B', dark: '#111D35' },
+            gold: { DEFAULT: '#C9A96E', light: '#D4BA88' },
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white">
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATIE
+       ══════════════════════════════════════════ -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <svg class="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 17h18l-2-4H5L3 17zm0 2v1a1 1 0 001 1h16a1 1 0 001-1v-1H3zM12 2L8 8h8l-4-6z"/>
+          </svg>
+          <span class="logo-text font-display text-xl font-semibold text-white transition-colors duration-300">Libertas Tours</span>
+        </a>
+
+        <!-- Desktop navigatie -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-sm font-medium uppercase tracking-wider text-white transition-colors">Home</a>
+          <a href="agenda.html" class="nav-link text-sm font-medium uppercase tracking-wider text-white transition-colors">Agenda</a>
+          <a href="bemanning.html" class="nav-link text-sm font-medium uppercase tracking-wider text-white transition-colors">Bemanning</a>
+          <a href="locaties.html" class="nav-link text-sm font-medium uppercase tracking-wider text-white transition-colors">Locaties</a>
+          <a href="service-en-tarieven.html" class="nav-link text-sm font-medium uppercase tracking-wider text-white transition-colors">Service en Rates</a>
+          <a href="contact.html" class="nav-link text-sm font-medium uppercase tracking-wider text-white transition-colors">Contact</a>
+        </div>
+
+        <!-- Hamburger (mobiel) -->
+        <button id="hamburger" class="md:hidden text-white p-2" aria-label="Menu openen">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobiel menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-navy z-50 flex flex-col items-center justify-center gap-8 md:hidden">
+      <button id="mobile-close" class="absolute top-6 right-6 text-white p-2" aria-label="Menu sluiten">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <a href="index.html" class="text-white text-2xl font-display">Home</a>
+      <a href="agenda.html" class="text-white text-2xl font-display">Agenda</a>
+      <a href="bemanning.html" class="text-white text-2xl font-display">Bemanning</a>
+      <a href="locaties.html" class="text-white text-2xl font-display">Locaties</a>
+      <a href="service-en-tarieven.html" class="text-white text-2xl font-display">Service en Rates</a>
+      <a href="contact.html" class="text-white text-2xl font-display">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO SECTIE (Mockup scherm 1)
+       ══════════════════════════════════════════ -->
+  <section class="relative h-screen min-h-[600px] flex items-center justify-center">
+    <!-- Achtergrond afbeelding (placeholder) -->
+    <div class="absolute inset-0 bg-navy">
+      <div class="absolute inset-0 img-placeholder">
+        <div class="text-center text-white/40">
+          <svg class="w-24 h-24 mx-auto mb-4 opacity-30" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 17h18l-2-4H5L3 17zm0 2v1a1 1 0 001 1h16a1 1 0 001-1v-1H3zM12 2L8 8h8l-4-6z"/>
+          </svg>
+          <p class="text-sm">Hero afbeelding — foto van De Libertas op het water</p>
+        </div>
+      </div>
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white italic leading-tight mb-6">
+        Game-based training in een historisch opleidingsschip te midden van schitterende locaties!
+      </h1>
+
+      <!-- CTA knoppen -->
+      <div class="flex flex-wrap justify-center gap-4 mt-8">
+        <a href="contact.html" class="btn-gold text-sm uppercase tracking-wider">Offerte aanvragen</a>
+        <a href="#filosofie" class="btn-primary border border-white/30 text-sm uppercase tracking-wider">Filosofie</a>
+        <a href="het-schip.html" class="btn-primary border border-white/30 text-sm uppercase tracking-wider">History</a>
+        <a href="bemanning.html" class="btn-primary border border-white/30 text-sm uppercase tracking-wider">The Captain</a>
+      </div>
+    </div>
+
+    <!-- Scroll-down indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 animate-bounce">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       USP STRIP
+       ══════════════════════════════════════════ -->
+  <section class="bg-navy py-6">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <div class="flex items-center justify-center gap-3 text-white">
+        <svg class="w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <span class="text-sm font-medium">Dagtraining of meerdaagse training</span>
+      </div>
+      <div class="flex items-center justify-center gap-3 text-white">
+        <svg class="w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <span class="text-sm font-medium">Op wisselende, uitdagende vaarlocatie</span>
+      </div>
+      <div class="flex items-center justify-center gap-3 text-white">
+        <svg class="w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <span class="text-sm font-medium">Praktijk centraal, theorie alleen ter ondersteuning</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FILOSOFIE (Mockup scherm 2)
+       ══════════════════════════════════════════ -->
+  <section id="filosofie" class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="fade-in text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-navy italic mb-4">
+          Aan de kade regeert de waan van de dag.
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="fade-in grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-lg leading-relaxed text-text-light mb-6">
+            Volle agenda's, constante prikkels en de druk om altijd 'aan' te staan.
+            Wij varen op de automatische piloot, totdat we vergeten waar we eigenlijk naartoe wilden.
+          </p>
+          <h3 class="font-display text-xl text-navy font-semibold mb-3">
+            Op De Libertas laten we de ruis achter bij de sluis
+          </h3>
+          <p class="text-base leading-relaxed text-text-light">
+            Zodra de trossen losgaan, verandert alles. De horizon geeft perspectief, de cadans
+            van het schip brengt rust in je hoofd. Op een schip van 38 meter kun je nergens heen,
+            behalve naar de kern. Hier ontstaat de ruimte voor het gesprek dat aan de wal niet
+            gevoerd wordt. Geen steriele vergaderkamer, maar de rauwe, eerlijke context van de natuur.
+          </p>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <!-- Placeholder foto: schip bij de sluis -->
+          <div class="img-placeholder h-80 bg-gradient-to-br from-slate-200 to-slate-300">
+            <span>Foto: De Libertas bij de sluis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       DRIE WEGEN (Mockup scherm 3)
+       ══════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="fade-in text-center mb-16">
+        <h2 class="font-display text-3xl md:text-4xl text-navy mb-4">
+          Drie wegen naar een nieuwe koers.
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Weg 1: Reflectie -->
+        <div class="fade-in card">
+          <div class="img-placeholder h-56 bg-gradient-to-br from-blue-100 to-blue-200">
+            <span>Foto: Ruth Lachaert</span>
+          </div>
+          <div class="p-6">
+            <div class="text-gold font-display text-4xl font-bold mb-2">1</div>
+            <h3 class="font-display text-xl text-navy font-semibold mb-3">
+              Reflectie &amp; Persoonlijke Koers
+            </h3>
+            <p class="text-text-light text-sm leading-relaxed">
+              Onder begeleiding van Ruth Lachaert. Ontdek patronen, creëer bewustzijn
+              en vind de koers die echt bij je past.
+            </p>
+          </div>
+        </div>
+
+        <!-- Weg 2: Teamdynamiek -->
+        <div class="fade-in card">
+          <div class="img-placeholder h-56 bg-gradient-to-br from-teal-100 to-teal-200">
+            <span>Foto: Team aan boord</span>
+          </div>
+          <div class="p-6">
+            <div class="text-gold font-display text-4xl font-bold mb-2">2</div>
+            <h3 class="font-display text-xl text-navy font-semibold mb-3">
+              Teamdynamiek &amp; Leiderschap
+            </h3>
+            <p class="text-text-light text-sm leading-relaxed">
+              Teams die vastlopen of willen groeien, vinden aan boord hun ritme terug.
+              De dynamiek van het schip maakt rollen en communicatie direct zichtbaar.
+              Geen rollenspellen, maar echt werken met de elementen.
+            </p>
+          </div>
+        </div>
+
+        <!-- Weg 3: Vakmanschap -->
+        <div class="fade-in card">
+          <div class="img-placeholder h-56 bg-gradient-to-br from-amber-100 to-amber-200">
+            <span>Foto: IJsbrand aan het roer</span>
+          </div>
+          <div class="p-6">
+            <div class="text-gold font-display text-4xl font-bold mb-2">3</div>
+            <h3 class="font-display text-xl text-navy font-semibold mb-3">
+              Vakmanschap &amp; Meesterschap
+            </h3>
+            <p class="text-text-light text-sm leading-relaxed">
+              Voor fijnproevers van het varen. IJsbrand Overmaat deelt 30 jaar expertise.
+              Leer een schip van 38 meter beheersen met precisie en rust.
+              Een masterclass, voorbij de basisvaardigheden.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       WAAROM DE LIBERTAS (Mockup scherm 4)
+       ══════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="fade-in text-center mb-16">
+        <h2 class="font-display text-3xl md:text-4xl text-navy mb-4">
+          Waarom De Libertas?
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Schip afbeelding -->
+      <div class="fade-in rounded-lg overflow-hidden shadow-lg mb-16">
+        <div class="img-placeholder h-72 md:h-96 bg-gradient-to-r from-slate-200 to-blue-200">
+          <span>Foto: De Libertas in volle glorie</span>
+        </div>
+      </div>
+
+      <!-- Drie pijlers -->
+      <div class="grid md:grid-cols-3 gap-10 mb-16">
+        <div class="fade-in text-center">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-navy/5 flex items-center justify-center">
+            <svg class="w-8 h-8 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl text-navy font-semibold mb-3">Zintuiglijke Rust</h3>
+          <p class="text-text-light text-sm leading-relaxed">
+            Geen wifi-stress of rinkelende telefoons, maar de geur van het water en de focus van het moment.
+          </p>
+        </div>
+
+        <div class="fade-in text-center">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-navy/5 flex items-center justify-center">
+            <svg class="w-8 h-8 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl text-navy font-semibold mb-3">De Expertise van Twee Werelden</h3>
+          <p class="text-text-light text-sm leading-relaxed">
+            De psychologische diepgang van Ruth gecombineerd met de nautische nuchterheid van IJsbrand.
+          </p>
+        </div>
+
+        <div class="fade-in text-center">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-navy/5 flex items-center justify-center">
+            <svg class="w-8 h-8 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl text-navy font-semibold mb-3">Maatwerk op de Stroom</h3>
+          <p class="text-text-light text-sm leading-relaxed">
+            Of het nu gaat om een middag scherpte of een week vertraging: wij varen de koers die jij nodig hebt.
+          </p>
+        </div>
+      </div>
+
+      <!-- Citaat -->
+      <div class="fade-in max-w-3xl mx-auto">
+        <blockquote class="quote text-xl md:text-2xl text-center py-6">
+          "Je kunt de wind niet veranderen, maar wel de stand van de zeilen – en de koers van je eigen leven."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CTA SECTIE
+       ══════════════════════════════════════════ -->
+  <section class="py-20 bg-navy text-white text-center">
+    <div class="max-w-3xl mx-auto px-4 fade-in">
+      <h2 class="font-display text-3xl md:text-4xl italic mb-6">
+        Klaar om los te gaan?
+      </h2>
+      <p class="text-white/80 text-lg mb-8">
+        Neem contact op voor een vrijblijvend gesprek over de mogelijkheden aan boord van De Libertas.
+      </p>
+      <a href="contact.html" class="btn-gold text-lg uppercase tracking-wider">
+        Offerte aanvragen
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════ -->
+  <footer class="bg-navy-dark text-white/70 py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+
+        <!-- Kolom 1: Over -->
+        <div>
+          <h4 class="font-display text-lg text-white mb-4">Libertas Tours</h4>
+          <p class="text-sm leading-relaxed">
+            Een Kempenaar op de rivier, in blauw, wit en zwart.
+            Game-based training op een historisch opleidingsschip.
+          </p>
+        </div>
+
+        <!-- Kolom 2: Navigatie -->
+        <div>
+          <h4 class="font-display text-lg text-white mb-4">Navigatie</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+            <li><a href="bemanning.html" class="hover:text-gold transition-colors">Bemanning</a></li>
+            <li><a href="het-schip.html" class="hover:text-gold transition-colors">Het Schip</a></li>
+            <li><a href="agenda.html" class="hover:text-gold transition-colors">Agenda</a></li>
+            <li><a href="service-en-tarieven.html" class="hover:text-gold transition-colors">Service en Rates</a></li>
+            <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Contact -->
+        <div>
+          <h4 class="font-display text-lg text-white mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="mailto:info@libertas.tours" class="hover:text-gold transition-colors">
+                info@libertas.tours
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="hover:text-gold transition-colors">
+                Offerte aanvragen →
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 text-center text-xs text-white/40">
+        <p>&copy; 2026 Libertas Tours. Alle rechten voorbehouden.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

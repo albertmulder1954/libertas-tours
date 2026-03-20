@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locaties — Libertas Tours</title>
+  <meta name="description" content="Ontdek de vaarlocaties van De Libertas. Wisselende, uitdagende routes door heel Nederland.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        navy: { DEFAULT: '#1B2A4A', light: '#2C3E6B', dark: '#111D35' },
+        gold: { DEFAULT: '#C9A96E', light: '#D4BA88' },
+      }}}
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white">
+
+  <!-- NAVIGATIE -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <svg class="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 17h18l-2-4H5L3 17zm0 2v1a1 1 0 001 1h16a1 1 0 001-1v-1H3zM12 2L8 8h8l-4-6z"/>
+          </svg>
+          <span class="logo-text font-display text-xl font-semibold text-gray-800">Libertas Tours</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Home</a>
+          <a href="agenda.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Agenda</a>
+          <a href="bemanning.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Bemanning</a>
+          <a href="locaties.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Locaties</a>
+          <a href="service-en-tarieven.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Service en Rates</a>
+          <a href="contact.html" class="nav-link text-sm font-medium uppercase tracking-wider text-gray-800">Contact</a>
+        </div>
+        <button id="hamburger" class="md:hidden text-gray-800 p-2" aria-label="Menu openen">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-navy z-50 flex flex-col items-center justify-center gap-8 md:hidden">
+      <button id="mobile-close" class="absolute top-6 right-6 text-white p-2" aria-label="Menu sluiten">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <a href="index.html" class="text-white text-2xl font-display">Home</a>
+      <a href="agenda.html" class="text-white text-2xl font-display">Agenda</a>
+      <a href="bemanning.html" class="text-white text-2xl font-display">Bemanning</a>
+      <a href="locaties.html" class="text-white text-2xl font-display">Locaties</a>
+      <a href="service-en-tarieven.html" class="text-white text-2xl font-display">Service en Rates</a>
+      <a href="contact.html" class="text-white text-2xl font-display">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="pt-32 pb-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="font-display text-4xl md:text-5xl text-navy mb-4">Locaties</h1>
+      <div class="section-divider"></div>
+      <p class="text-text-light text-lg mt-6">Wisselende, uitdagende vaarlocaties door heel Nederland</p>
+    </div>
+  </section>
+
+  <!-- LOCATIES -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <div class="fade-in max-w-3xl mx-auto text-center mb-16">
+        <p class="text-lg leading-relaxed text-text-light">
+          De Libertas vaart op wisselende locaties. Elke route biedt een unieke ervaring —
+          van drukke vaarwegen waar samenwerking cruciaal is, tot rustige wateren die
+          uitnodigen tot reflectie. De locatie wordt afgestemd op het doel van uw programma.
+        </p>
+      </div>
+
+      <!-- Locatie kaarten -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="fade-in card">
+          <div class="img-placeholder h-48 bg-gradient-to-br from-blue-100 to-blue-200">
+            <span>Foto: rivierengebied</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-lg text-navy font-semibold mb-2">Rivierengebied</h3>
+            <p class="text-text-light text-sm">De grote rivieren — Rijn, Waal, Maas. Dynamisch vaarwater dat samenwerking en besluitvaardigheid vraagt.</p>
+          </div>
+        </div>
+
+        <div class="fade-in card">
+          <div class="img-placeholder h-48 bg-gradient-to-br from-teal-100 to-teal-200">
+            <span>Foto: kanalen</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-lg text-navy font-semibold mb-2">Kanalen & Sluizen</h3>
+            <p class="text-text-light text-sm">Preciewerk door smalle kanalen en sluizen. Ideaal voor focus op communicatie en nauwkeurig samenwerken.</p>
+          </div>
+        </div>
+
+        <div class="fade-in card">
+          <div class="img-placeholder h-48 bg-gradient-to-br from-amber-100 to-amber-200">
+            <span>Foto: meren</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-lg text-navy font-semibold mb-2">Meren & Open Water</h3>
+            <p class="text-text-light text-sm">Ruimte, stilte en weidsheid. Perfecte setting voor reflectie en persoonlijke ontwikkeling.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Opmerking -->
+      <div class="fade-in text-center mt-12 p-8 bg-gray-50 rounded-lg">
+        <p class="text-text-light">
+          De vaarlocatie wordt in overleg bepaald op basis van uw wensen en het type programma.
+          <br><a href="contact.html" class="text-navy font-medium hover:text-gold transition-colors">Bespreek de mogelijkheden →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-dark text-white/70 py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h4 class="font-display text-lg text-white mb-4">Libertas Tours</h4>
+          <p class="text-sm leading-relaxed">Een Kempenaar op de rivier, in blauw, wit en zwart.</p>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-white mb-4">Navigatie</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+            <li><a href="bemanning.html" class="hover:text-gold transition-colors">Bemanning</a></li>
+            <li><a href="het-schip.html" class="hover:text-gold transition-colors">Het Schip</a></li>
+            <li><a href="service-en-tarieven.html" class="hover:text-gold transition-colors">Service en Rates</a></li>
+            <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-white mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:info@libertas.tours" class="hover:text-gold transition-colors">info@libertas.tours</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 text-center text-xs text-white/40">
+        <p>&copy; 2026 Libertas Tours. Alle rechten voorbehouden.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
