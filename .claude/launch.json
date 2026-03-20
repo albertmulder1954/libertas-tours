@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "libertas-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "C:\\Users\\alber\\libertas-tours", "-l", "3456"],
+      "port": 3456
+    }
+  ]
+}
