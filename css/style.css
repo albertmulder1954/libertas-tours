@@ -84,8 +84,8 @@ body {
 }
 
 .btn-gold {
-  background-color: var(--gold);
-  color: var(--navy-dark);
+  background-color: #F57C00;
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
   font-weight: 600;
@@ -94,7 +94,7 @@ body {
 }
 
 .btn-gold:hover {
-  background-color: var(--gold-light);
+  background-color: #EF6C00;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(201, 169, 110, 0.3);
 }
