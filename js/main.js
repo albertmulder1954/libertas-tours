@@ -57,43 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ── Scroll: navigatie achtergrond bij scrollen ──
-  const nav = document.getElementById('main-nav');
-  if (nav) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        nav.classList.add('bg-white', 'shadow-md');
-        nav.classList.remove('bg-transparent');
-        nav.querySelectorAll('.nav-link').forEach(l => {
-          l.classList.remove('text-white');
-          l.classList.add('text-gray-800');
-        });
-        const logo = nav.querySelector('.logo-text');
-        if (logo) {
-          logo.classList.remove('text-white');
-          logo.classList.add('text-gray-800');
-        }
-      } else {
-        nav.classList.remove('bg-white', 'shadow-md');
-        nav.classList.add('bg-transparent');
-        // Alleen op de homepage transparante nav
-        if (currentPage === 'index.html' || currentPage === '') {
-          nav.querySelectorAll('.nav-link').forEach(l => {
-            l.classList.add('text-white');
-            l.classList.remove('text-gray-800');
-          });
-          const logo = nav.querySelector('.logo-text');
-          if (logo) {
-            logo.classList.add('text-white');
-            logo.classList.remove('text-gray-800');
-          }
-        }
-      }
-    });
-
-    // Trigger scroll event on load
-    window.dispatchEvent(new Event('scroll'));
-  }
+  // ── Navigatie: altijd wit met donkere tekst ──
+  // (scroll-logica verwijderd — nav blijft vast wit)
 
   // ── Smooth scroll voor anker-links ──
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
