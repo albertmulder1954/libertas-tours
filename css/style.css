@@ -32,15 +32,17 @@ h1, h2, h3 {
   hyphens: auto;
 }
 
-/* The logo shrinks on narrow phones so it fits next to the menu button */
-#main-nav .justify-between > a:first-child {
-  min-width: 0;
-}
+/* The logo shrinks on narrow phones so it fits next to the menu button (below Tailwind's md breakpoint) */
+@media (max-width: 767px) {
+  #main-nav .justify-between > a:first-child {
+    min-width: 0;
+  }
 
-#main-nav img[src$="logo.svg"] {
-  max-width: 100%;
-  object-fit: contain;
-  object-position: left center;
+  #main-nav img[src$="logo.svg"] {
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left center;
+  }
 }
 
 /* Montserrat voor alles */
