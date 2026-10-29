@@ -21,6 +21,28 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Anchor targets land below the fixed nav (h-20 = 5rem) */
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* Long Dutch words in headings break instead of widening the page on narrow phones */
+h1, h2, h3 {
+  overflow-wrap: anywhere; /* "anywhere" also narrows min-content, so centred flex items shrink too */
+  hyphens: auto;
+}
+
+/* The logo shrinks on narrow phones so it fits next to the menu button */
+#main-nav .justify-between > a:first-child {
+  min-width: 0;
+}
+
+#main-nav img[src$="logo.svg"] {
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
 /* Montserrat voor alles */
 .font-display {
   font-family: 'Montserrat', sans-serif;
@@ -146,11 +168,14 @@ body {
 /* Mobiele navigatie */
 .mobile-menu {
   transform: translateX(100%);
-  transition: transform 0.3s ease;
+  visibility: hidden; /* closed menu: out of the tab order and the accessibility tree */
+  transition: transform 0.3s ease, visibility 0s linear 0.3s;
 }
 
 .mobile-menu.open {
   transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.3s ease, visibility 0s;
 }
 
 /* Placeholder afbeeldingen */
